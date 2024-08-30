@@ -14,6 +14,22 @@ This is an extension of the popular `21cmFAST` code that interfaces with `CLASS`
 In addition, the user interface in `21cmFirstCLASS` has been improved and allows one to easily plot the 21cm power spectrum while including noise from the output of `21cmSense`.
 ![power spectrum](https://github.com/jordanflitter/21cmFirstCLASS/blob/main/images/power_spectrum.png)
 
+## Docker installation
+Simply run the following to build the image
+```bash
+docker build -t 21cmfirstclass .
+```
+
+To run the container *in temporary mode*:
+```bash
+docker run -p 8888:8888 -it --rm 21cmfirstclass /bin/bash
+```
+
+From within the container you can run jupyter and access it from the browser:
+```bash
+jupyter notebook --allow-root --ip=0.0.0.0
+```
+
 ## Using the code
 Comprehensive jupyter notebook tutorials have been prepared for this code, check them out at the following links.
 * [Notebook #1](https://github.com/jordanflitter/21cmFirstCLASS/blob/main/Tutorial%20(Jupyter%20notebooks)/notebook_1.ipynb) for installation instructions and basic usage.
